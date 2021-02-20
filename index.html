@@ -1,208 +1,42 @@
-// Dummy data placeholder. Replace with array of actual data objects to come from Airtable
-const data = [
-  {
-    "project": "Project X",
-    "stack": ["react", "express", "node"],
-    "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
-    "website": "https://www.google.com",
-    "github": "https://www.github.com",
-    "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/326643/Sample%20Logo.png",
-    "needs": "People with super powers",
-    "status": "In Development"
-  },
-  {
-    "project": "Project XYZ",
-    "stack": ["python", "django"],
-    "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
-    "website": "https://www.google.com",
-    "github": "https://www.github.com",
-    "needs": "People with super powers, semi-super powers, or no powers at all",
-    "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/326643/sample%20logo%202.png",
-    "status": "Live"
-  },{
-    "project": "Project X",
-    "stack": ["react", "express", "node"],
-    "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
-    "website": "https://www.google.com",
-    "github": "https://www.github.com",
-    "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/326643/Sample%20Logo.png",
-    "needs": "People with super powers",
-    "status": "In Development"
-  },
-  {
-    "project": "Project XYZ",
-    "stack": ["python", "django"],
-    "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
-    "website": "https://www.google.com",
-    "github": "https://www.github.com",
-    "needs": "People with super powers, semi-super powers, or no powers at all",
-    "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/326643/sample%20logo%202.png",
-    "status": "Live"
-  },{
-    "project": "Project X",
-    "stack": ["react", "express", "node"],
-    "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
-    "website": "https://www.google.com",
-    "github": "https://www.github.com",
-    "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/326643/Sample%20Logo.png",
-    "needs": "People with super powers",
-    "status": "In Development"
-  },
-  {
-    "project": "Project XYZ",
-    "stack": ["python", "django"],
-    "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
-    "website": "https://www.google.com",
-    "github": "https://www.github.com",
-    "needs": "People with super powers, semi-super powers, or no powers at all",
-    "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/326643/sample%20logo%202.png",
-    "status": "Live"
-  }
- ];
-
-function Layout(props){
-  return(
-      <div className="row">{props.children}</div>
-    )
-}
-
-class Card extends React.Component {
-  render(){
-    const style = {
-      img: {
-        maxWidth: "400px"
-      }
-    }
-    return(
-      <div className="col m4">
-        <div className="card hoverable">
-          <div className="card-image waves-effect waves-block waves-light">
-            <img style={style.img} className="activator" src={this.props.data.image}/>
-          </div>
-          <div className="card-content">
-            <div>
-              <StackIcons data={this.props.data.stack}/>
-            </div>
-            <span className="card-title activator grey-text text-darken-4">
-              {this.props.data.project}
-              <i className="material-icons right">more_vert</i>
-            </span>
-            <div>
-              <span><a href={this.props.data.website}>Website</a></span>
-              <span><a className="github" href={this.props.data.github}>Github</a></span>
-            </div>
-          </div>
-          <div className="card-reveal">
-            <span className="card-title grey-text text-darken-4">{this.props.data.project}<i className="material-icons right">close</i></span>
-            <div><span className="status">{this.props.data.status}</span></div>
-            <p>{this.props.data.description}</p>
-            <p><strong>Need:</strong></p>
-            <p>{this.props.data.needs}</p>
-          </div>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+	<header class = "header_area">
+		<div class="main-menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="me-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
         </div>
-      </div>
-    )
-  }
-}
-
-// Note: Empty span tag on line 115 is there as placeholder for
-// the custom CSS to inject text based on stack item.
-function StackIcons(props) {
-  const array = props.data;
-  const icons = array.map((item) => {
-    return (
-      <div key={item} className="icon">
-        <span className={item}><span/></span>
-      </div>
-    );
-  });
-  return(
-    <div> {icons} </div>
-  )
-}
-
-function Projects(props){
-  const projects = [];
-  const data = props.data;
-  data.forEach((item) => { projects.push( <Card data={item} /> )});
-  return(
-    <div>{projects}</div>
-  )
-}
-
-ReactDOM.render(
-  <Layout children={<Projects data={data} />} />,
-  document.getElementById('root')
-);
-#title {
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-
-.icon {
-  font-size: .9rem;
-  display: inline-flex;
-  background: #D8D8D8;
-  border-radius: 3px;
-  margin-right: 5px;
-  margin-bottom: 15px;
-  span {
-    border-radius: 5px;
-    padding: 3px 5px;
-  };
-}
-
-.react {
-  background: #BAD5F5;
-  span::after {
-    content: "React.js";
-  }
-}
-
-.express {
-  background: #F2C986;
-  span::after {
-    content: "Express";
-  }
-}
-
-.node {
-  background: #E1C1C1;
-  span::after {
-    content: "Node.js";
-  }
-}
-
-.python {
-  background: #EADD86;
-  span::after {
-    content: "Python";
-  }
-}
-
-.django {
-  background: #AFEAE5;
-  span::after {
-    content: "Django";
-  }
-}
-
-.card {
-  a {
-    padding-right: 15px;
-  }
-}
-
-.github {
-  color: #739150;
-}
-
-.status {
-  color: #7699C2;
-}
-div
-  .container
-    p#title
-      | PROJECTS
-    .row
-      #root
+      </nav>
+    </div>
+	</header>
+    <script src="./js/jquery.3.5.1.js" charset="utf-8"></script>
+    <script src="./js/bootstrap.min.js" charset="utf-8"></script>
+  </body>
+</html>

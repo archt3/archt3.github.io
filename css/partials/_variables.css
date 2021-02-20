@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+html,body{
+    margin:0%;
+    box-sizing: border-box;
+    width: 100%;
+    height:100%;
+}
+
+:root{
+    --primary-color:#348ceb;
+    --primary-color2:#b2bac2;
+    --title-color: #454a4f;
+    --text-color:#141313;
+    --border-color:#777777;
+    --gradient-color:#0501f7;
+    --shadow-color:0px 10px 30px rgba(19, 71, 243, 0.616);
+    --box-shadow: 0px 10px 30px rgba(57,56,61,0.205);
+
+    --sans: "Source Sans Pro", sans-serif;
+}
