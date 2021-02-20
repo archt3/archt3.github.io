@@ -24,10 +24,10 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Experience</a>
+              <a class="nav-link" href="#proj">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
+              <a class="nav-link" href="#">Experience</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="#">Disabled</a>
@@ -67,18 +67,23 @@
     </section>
   </main>
   <!--end-->
+  
+  
   <div class="container">
+    <a id = "proj"></a>
+    <h3>Projects</h3>
     <div class="row">
             <!-- Card 1 -->
       <div class="col-md-4 card-container">
         <div class="card-flip">
           <!-- Card 1 Front -->
           <div class="card front">
-            <span class="fa fa-4x fa-smile-o text-center"></span>
+            <img src="./najee.jfif" class="card-img-top img-fluid">
             <div class="card-block">
-              <h4 class="card-title text-center">NFL RB projections</h4>
-              <h6 class="card-subtitle mb-2 text-muted text-center">Front Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h4 class="card-title">NFL RB Projections</h4>
+              <p class="card-text">Using machine learning to estimate player's careers</p>
+              <br>
+              <p class="card-text"><small class="text-muted">Python, Sci-kit learn, Machine Learning</small></p>
             </div>
           </div>
           <!-- End Card 1 Front -->
@@ -86,9 +91,10 @@
           <!-- Card 1 Back -->
           <div class="card back text-center">
             <div class="card-block">
-              <h4 class="card-title">Back Title aligned to the center</h4>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h4 class="card-title">NFL combine based Machine Learning projections</h4>
+              <p class="card-text">I used 6 different metrics from the NFL combine to attempt to project the careers of incoming running backs. 
+                I created separate two models, one was a multiple input linear regressor, and the other was a neural net.</p>
+              <a href="https://github.com/archt3/combine-project" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Github</a>
             </div>
           </div>
           <!-- End Card 1 Back -->
@@ -101,24 +107,26 @@
         <div class="card-flip">
           <!-- Card 2 Front -->
           <div class="card front">
-            <img src="https://nikonrumors.com/wp-content/uploads/2014/03/Nikon-1-V3-sample-photo.jpg" class="card-img-top img-fluid">
+            <img src="unnamed.webp" class="card-img-top img-fluid">
             <div class="card-block">
-              <h4 class="card-title">Front Card Title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <h4 class="card-title">Android Racing Game</h4>
+              
+              <p class="card-text">A racing game I made one summer with a computer controlled opponent.</p>
+              <br><br><br>
+              <br><br>
+              <p class="card-text"><small class="text-muted">Unity with C# scripts</small></p>
             </div>
           </div>
           <!-- End Card 2 Front -->
   
           <!-- Card 2 Back -->
-          <div class="card back">
-            <div class="card-header">
-              Featured
-            </div>
+          <div class="card back text-center">
             <div class="card-block">
-              <h4 class="card-title">Special title treatment</h4>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h4 class="card-title">Android Racing Game</h4>
+              <p class="card-text">Game has 3D graphics and computer controlled opponent with a variety of obstacles, including a bridge 
+                and numerous mountains. (Might lag on some devices but unfortunately I lost the source code for it before being able to optimize it). 
+                There was also a computer version.</p>
+              <a href="https://github.com/archt3/Android-racing" target="_blank" rel="noopener noreferrer" class="btn btn-primary">APK file on Github</a>
             </div>
           </div>
           <!-- End Card 2 Back -->
