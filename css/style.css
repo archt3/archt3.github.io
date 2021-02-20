@@ -4,12 +4,18 @@
 @import url(global.css);
 
 /*@import url(/css/variables.css);*/
-
+.newimg{
+    border-radius:50%;
+    max-width: 70%;
+}
 .header_area .main-menu .navbar .navbar-brand{
     padding:0 2rem 0 0rem;
 }
 .header_area .main-menu .navbar{
     padding:1rem 0rem;
+}
+.header_area .nav-item{
+    padding:1rem;
 }
 .header_area .main-menu .nav-item .nav-link{
     font: normal 500 15px/2px var(--sans);
@@ -30,9 +36,7 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;*/
 }
-.site-main {
-    padding-bottom: 10%;
-}
+
 .site-main .site-banner {
     background: url() no-repeat;
     background-position: 0% 50%;
