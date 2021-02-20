@@ -1,36 +1,19 @@
 @import url(./fonts.css);
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url(variables.css);
+@import url(global.css);
 
 /*@import url(/css/variables.css);*/
-html,body{
-    margin:0%;
-    box-sizing: border-box;
-    width: 100%;
-    height:100%;
-}
 
-:root{
-    --primary-color:#348ceb;
-    --primary-color2:#b2bac2;
-    --title-color: #454a4f;
-    --text-color:#141313;
-    --border-color:#777777;
-    --gradient-color:#0501f7;
-    --shadow-color:0px 10px 30px rgba(19, 71, 243, 0.616);
-    --box-shadow: 0px 10px 30px rgba(57,56,61,0.205);
-
-    --sans: "Source Sans Pro", sans-serif;
-}
 .header_area .main-menu .navbar .navbar-brand{
-    padding:0 2rem 0 5rem;
+    padding:0 2rem 0 0rem;
 }
 .header_area .main-menu .navbar{
-    padding:1rem 2rem;
+    padding:1rem 0rem;
 }
 .header_area .main-menu .nav-item .nav-link{
-    font-family: var(--sans);
+    font: normal 500 15px/2px var(--sans);
     text-transform: uppercase;
-    font-weight: 500;
     padding: 1.7rem;
     color: var(--primary-color);
 }
@@ -47,3 +30,71 @@ html,body{
     -webkit-text-fill-color: transparent;
     background-clip: text;*/
 }
+.site-main {
+    padding-bottom: 10%;
+}
+.site-main .site-banner {
+    background: url() no-repeat;
+    background-position: 0% 50%;
+}
+.site-main .site-banner .site-title h3{
+    padding-top: 15%;
+    font-weight: 500;
+}
+.site-main .site-banner .site-title h3::after{
+    height: 2px;
+    width: 18vw;
+    background:black;
+    display: inline-block;
+    
+    transform: translateY(-10px);
+}
+.site-main .site-banner .site-title h1{
+    font-size:5rem;
+}
+.site-main .site-banner .site-title h4{
+    font-size: 1.5rem;
+}
+.site-main .site-banner .banner-image > img{
+    padding: 7rem 0;
+    width: 90rem;
+}
+.card {
+    margin: 10px 10px;
+}
+.card-block {
+    margin:15px;
+}
+  
+  /* Flip Cards CSS */
+  .card-container {
+    display: grid;
+    perspective: 700px;
+  }
+  
+  .card-flip {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    grid-template-areas: "frontAndBack";
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+  }
+  
+  .card-flip div {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+  
+  .front {
+    grid-area: frontAndBack;
+  }
+  
+  .back {
+    grid-area: frontAndBack;
+    transform: rotateY(-180deg);
+  }
+  
+  .card-container:hover .card-flip {
+    transform: rotateY(180deg);
+  }
+
