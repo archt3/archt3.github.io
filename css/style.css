@@ -1,7 +1,7 @@
 @import url(./fonts.css);
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
-@import url(./partials/_variables.css);
+@import url(css\partials\_variables.css);
 .header_area .main-menu .navbar .navbar-brand{
     padding:0 2rem 0 5rem;
 }
