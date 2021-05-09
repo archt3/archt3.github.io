@@ -1,0 +1,23 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "site",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/archt3/archt3.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/archt3/archt3.github.io/issues"
+  },
+  "homepage": "https://github.com/archt3/archt3.github.io#readme",
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "scrollmagic": "^2.0.8"
+  }
+}
