@@ -18,6 +18,8 @@
   "homepage": "https://github.com/archt3/archt3.github.io#readme",
   "dependencies": {
     "animejs": "^3.2.1",
-    "scrollmagic": "^2.0.8"
+    "gsap": "^3.6.1",
+    "scrollmagic": "^2.0.8",
+    "scrolltrigger": "^1.0.1"
   }
 }
